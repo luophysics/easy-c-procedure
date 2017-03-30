@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char a;
+
+    printf("Please input a small letter:");
+    scanf("%c", &a);
+
+    a = a - 32;
+
+    printf("%c\n", a);
+    printf("%d\n", a);
+
+    return 0;
+}
