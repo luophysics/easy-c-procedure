@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main(void)
+{
+    char sex, sports, diet;
+    double faHeight, moHeight, preHeight;
+
+    printf("Please input your child's sex(M or F):");
+    scanf("%c", &sex);
+    printf("Please input father's height:");
+    scanf("%lf", &faHeight);
+    printf("Please input mother's height:");
+    scanf("%lf", &moHeight);
+    printf("Does your child like playing sports?(Y or N):");
+    scanf(" %c", &sports);
+    printf("Does your child have a good diet?(Y or N):");
+    scanf(" %c", &diet);
+
+    if (sex=='M') {
+        preHeight = (faHeight+moHeight) * 0.54;
+    } else if (sex=='F') {
+        preHeight = (faHeight * 0.923 + moHeight)/2.0;
+    }
+
+
+    if (sports == 'Y') {
+        preHeight *= 1.02;
+    }
+
+
+    if (diet == 'Y') {
+        preHeight *= 1.015;
+    }
+
+    printf("Your child's height may be %f", preHeight);
+
+    return 0;
+}
